@@ -1,0 +1,50 @@
+apply plugin: 'com.android.application'
+android {
+    compileSdkVersion 25
+    buildToolsVersion '26.0.2'
+
+    defaultConfig {
+        applicationId "com.mike.MyApp"
+        minSdkVersion 15
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        debug {
+            testCoverageEnabled true
+        }
+    }
+}
+
+repositories{
+    flatDir{
+        dirs 'libs'
+    }
+
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.android.support:appcompat-v7:25.2.0'
+    compile 'junit:junit:4.12'
+    compile 'com.android.support:design:25.2.0'
+    //compile 'com.squareup.okhttp:okhttp:2.4.0'
+    //compile project(':worklight-android-native')
+    //compile 'com.google.android.gms:play-services-gcm:8.4.0'
+    //compile 'com.ibm.mobile.foundation:ibmmobilefirstplatformfoundation:8.0.0'
+    //compile(name:'ibmmobilefirstplatformfoundation_8.0.0', ext:'aar')
+    compile 'com.ibm.mobilefirstplatform.clientsdk.android:analytics:1.2.5'
+    compile 'com.google.android.gms:play-services-location:10.0.1'
+    // https://mvnrepository.com/artifact/org.jacoco/org.jacoco.agent
+    //testCompile group: 'org.jacoco', name: 'org.jacoco.agent', version: '0.7.6.201602180812'
+    compile 'com.squareup.okhttp3:okhttp:3.9.0'
+    compile 'com.squareup.okhttp3:okhttp-urlconnection:3.9.0'
+
+}

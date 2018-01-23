@@ -1,0 +1,166 @@
+<!--
+ Licensed to the Apache Software Foundation (ASF) under one
+ or more contributor license agreements.  See the NOTICE file
+ distributed with this work for additional information
+ regarding copyright ownership.  The ASF licenses this file
+ to you under the Apache License, Version 2.0 (the
+ "License"); you may not use this file except in compliance
+ with the License.  You may obtain a copy of the License at
+ 
+ http://www.apache.org/licenses/LICENSE-2.0
+ 
+ Unless required by applicable law or agreed to in writing,
+ software distributed under the License is distributed on an
+ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ KIND, either express or implied.  See the License for the
+ specific language governing permissions and limitations
+ under the License.
+ -->
+
+<!--
+ Customize this policy to fit your own app's needs. For more guidance, see:
+ https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+ Some notes:
+ * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+ * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+ * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+ * Enable inline JS: add 'unsafe-inline' to default-src
+ -->
+<!--html>
+ <head>
+ 
+ <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+ <meta name="format-detection" content="telephone=no">
+ <meta name="msapplication-tap-highlight" content="no">
+ <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+ <link rel="stylesheet" type="text/css" href="css/index.css">
+ <title>Hello World</title>
+ </head>
+ <body>
+ <div class="app">
+ <h1>Apache Cordova</h1>
+ <div id="deviceready" class="blink">
+ <p class="event listening">Connecting to Device</p>
+ <p class="event received">Device is Ready</p>
+ </div>
+ </div>
+ <script type="text/javascript" src="cordova.js"></script>
+ <script type="text/javascript" src="js/index.js"></script>
+ </body>
+ </html-->
+
+
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        
+        <!-- Import requireJS which loads our applicative index.js file -->
+        <!--script data-main="js/index" src="node_modules/requirejs/require.js"></script-->
+        
+        <title>BLUEMIX MOBILE ANALYTICS Starter - Web APP</title>
+        <meta http-equiv="Content-Security-Policy" content="default-src * gap://ready file:; style-src 'self' 'unsafe-inline'; img-src 'self'
+            data:; script-src * 'unsafe-inline' 'unsafe-eval'">
+    </head>
+    
+    <body>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        
+        <div id="main">
+            <div id="main_title">Hello Bluemix Mobile Analytics</div>
+            <div id="main_status"></div>
+            <div id="main_info"></div>
+        </div>
+        
+        <div id="button_content0">
+            <button id="ping">Ping MobileFirst Server</button>
+        </div>
+        
+        <div id="text_content0">
+            <input id="userIdentity" type="text" name="userIdentity" value="UserId" style="text-align: center;">
+        </div>
+        
+        <div id="button_content1">
+            <button id="setUsrContext">Set User Identity</button>
+        </div>
+        
+        
+        
+        <div id="button_content2">
+            <button id="disableLogger">Disable Log Capture</button>
+        </div>
+        
+        <div id="button_content3">
+            <button id="enableLogger">Enable Log Capture</button>
+        </div>
+        
+        <div id="button_content4">
+            <button id="isEnabled">Is Logger Enabled</button>
+        </div>
+        
+        
+        
+        <div id="button_content5">
+            <button id="getLogLevel">Get Log Level</button>
+        </div>
+        
+        <div id="text_content1">
+            <input id="loglevelset" type="text" name="loglevelset" value="DEBUG" style="text-align: center;">
+        </div>
+        
+        <div id="button_content6">
+            <button id="setLogLevel">Set Log Level</button>
+        </div>
+        
+        
+        
+        
+        <div id="text_content2">
+            <input id="logText" type="text" name="logText" value="app log" style="text-align: center;">
+        </div>
+        <div id="text_content3">
+            <input id="logTextLevel" type="text" name="logTextLevel" value="DEBUG" style="text-align: center;">
+        </div>
+        
+        <div id="button_content7">
+            <button id="sendLog">Send Log</button>
+        </div>
+        
+        
+        <div id="button_content8">
+            <button id="getlogStoreSize">Get Log Store Size</button>
+        </div>
+        <div id="text_content4">
+            <input id="logStoreSize" type="text" name="logStoreSize" value="100000" style="text-align: center;">
+        </div>
+        <div id="button_content9">
+            <button id="setlogStoreSize">Set Log Store Size</button>
+        </div>
+        
+        
+        <div id="button_content10">
+            <button id="enableAnalytics">Enable Analytics</button>
+        </div>
+        <div id="button_content11">
+            <button id="disableAnalytics">Disable Analytics</button>
+        </div>
+        <div id="button_content12">
+            <button id="sendAnalytics">Send Analytics</button>
+        </div>
+        
+        
+        <div id="text_content5">
+            <input id="analyticscustomlog" type="text" name="analyticscustomlog" value="analytics custom log" style="text-align: center;">
+        </div>
+        <div id="button_content13">
+            <button id="customLogAnalytics">Analytics Custom Log</button>
+        </div>
+        
+        
+        
+        
+    </body>
+    
+</html>
