@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "296788441800",
+    "project_id": "androidsample-1278a"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:296788441800:android:ecb55f6bb0b40fdc",
+        "android_client_info": {
+          "package_name": "com.mike.MyApp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "296788441800-8g0hcqpt76jtlsoqdfrl6806gvpmdvq1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyADDhYPyaPknZbC3tE9SDZKF0OpUC_t73w"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

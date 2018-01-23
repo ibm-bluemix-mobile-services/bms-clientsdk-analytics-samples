@@ -1,0 +1,6 @@
+platform :ios, '8.0'
+use_frameworks!
+target 'HelloWorld' do
+	pod 'BMSAnalytics', '~>2.0'
+	pod 'BMSSecurity', '~>2.0'
+end
