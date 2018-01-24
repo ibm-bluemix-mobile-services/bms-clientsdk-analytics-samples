@@ -1,0 +1,50 @@
+{
+    "cordova-plugin-whitelist": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-whitelist@1"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "bms-core": {
+        "source": {
+            "type": "registry",
+            "id": "bms-core@^2.3.8"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-cocoapod-support": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-cocoapod-support@1.2.10"
+        },
+        "is_top_level": false,
+        "variables": {}
+    },
+    "cordova-plugin-add-swift-support": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-add-swift-support"
+        },
+        "is_top_level": false,
+        "variables": {}
+    },
+    "cordova-plugin-geolocation": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-geolocation@2.4.3"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-compat": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-compat@^1.0.0"
+        },
+        "is_top_level": false,
+        "variables": {}
+    }
+}

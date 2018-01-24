@@ -1,0 +1,72 @@
+{
+  "_from": "bms-core",
+  "_id": "bms-core@2.3.8",
+  "_inBundle": false,
+  "_integrity": "sha1-9TiT7KfvahSAjOjsYH41LycucF0=",
+  "_location": "/bms-core",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "bms-core",
+    "name": "bms-core",
+    "escapedName": "bms-core",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/bms-core/-/bms-core-2.3.8.tgz",
+  "_shasum": "f53893eca7ef6a14808ce8ec607e352f272e705d",
+  "_spec": "bms-core",
+  "_where": "/Users/krishnendu/Mobilefirst/hello/node_modules",
+  "author": {
+    "name": "IBM Bluemix Mobile Services"
+  },
+  "bugs": {
+    "url": "https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core/issues"
+  },
+  "bundleDependencies": false,
+  "contributors": [
+    {
+      "name": "Larry Nickerson",
+      "email": "lnickers@us.ibm.com"
+    },
+    {
+      "name": "Sergio Escoto",
+      "email": "escotos@us.ibm.com"
+    },
+    {
+      "name": "Matthew Parangot"
+    },
+    {
+      "name": "Nana Amfo",
+      "email": "noamfo@us.ibm.com"
+    }
+  ],
+  "cordova": {
+    "id": "bms-core",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "deprecated": false,
+  "description": "Cordova Plugin for IBM Bluemix Mobile Services Core SDK",
+  "homepage": "https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core#readme",
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios"
+  ],
+  "license": "Apache version 2.0",
+  "name": "bms-core",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core.git"
+  },
+  "version": "2.3.8"
+}
