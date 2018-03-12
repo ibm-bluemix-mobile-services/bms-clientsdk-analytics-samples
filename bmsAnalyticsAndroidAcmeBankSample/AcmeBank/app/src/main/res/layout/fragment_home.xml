@@ -1,0 +1,325 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.acme.bank.fragments.LoyaltyFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:fillViewport="true"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="80dp">
+
+            <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/card_view"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_margin="15dp"
+                card_view:cardCornerRadius="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/customertypeheader"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/goldenColor"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/customertypetext"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_margin="5dp"
+                        android:textColor="@android:color/white"
+                        android:text="Platinum Customer"
+                        android:textStyle="bold"></TextView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/amexcard"
+                            android:layout_width="200dp"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/amexcardnew"></ImageView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_margin="5dp"
+                            android:text="Acme Express Platinum Card\n xxx-6789"
+                            android:textStyle="bold"></TextView>
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <!--<android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"-->
+                <!--android:id="@+id/makepayment_view"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="150dp"-->
+                <!--android:layout_margin="10dp"-->
+                <!--card_view:cardCornerRadius="8dp">-->
+
+                <!--<RelativeLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:orientation="vertical">-->
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/checking"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_alignParentTop="true"-->
+                        <!--android:layout_centerInParent="true"-->
+                        <!--android:layout_marginTop="5dp"-->
+                        <!--android:text="CHECKING"-->
+                        <!--android:textSize="15dp"-->
+                        <!--android:textStyle="bold" />-->
+
+                    <!--<LinearLayout-->
+                        <!--android:id="@+id/checkingline"-->
+                        <!--android:layout_width="70dp"-->
+                        <!--android:layout_height="2dp"-->
+                        <!--android:layout_below="@+id/checking"-->
+                        <!--android:layout_centerInParent="true"-->
+                        <!--android:background="@android:color/holo_green_light"-->
+                        <!--android:orientation="horizontal" />-->
+
+                    <!--<LinearLayout-->
+                        <!--android:id="@+id/basicchecking"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_below="@+id/checkingline"-->
+                        <!--android:layout_marginTop="30dp"-->
+                        <!--android:gravity="center"-->
+                        <!--android:orientation="horizontal">-->
+
+                        <!--<TextView-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_centerHorizontal="true"-->
+                            <!--android:layout_centerVertical="true"-->
+                            <!--android:text="Basic Checking"-->
+                            <!--android:textSize="18dp"-->
+                            <!--android:textStyle="bold" />-->
+
+                        <!--<TextView-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_marginLeft="5dp"-->
+                            <!--android:text="947"-->
+                            <!--android:textColor="@android:color/darker_gray"-->
+                            <!--android:textSize="15dp" />-->
+                    <!--</LinearLayout>-->
+
+                    <!--<LinearLayout-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_below="@+id/basicchecking"-->
+                        <!--android:gravity="center"-->
+                        <!--android:orientation="horizontal">-->
+
+                        <!--<TextView-->
+                            <!--android:id="@+id/checkingamount"-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:text="2,273.51"-->
+                            <!--android:textSize="26dp" />-->
+
+                        <!--<TextView-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_marginLeft="5dp"-->
+                            <!--android:text="available now"-->
+                            <!--android:textColor="@android:color/darker_gray"-->
+                            <!--android:textSize="13dp" />-->
+                    <!--</LinearLayout>-->
+                <!--</RelativeLayout>-->
+            <!--</android.support.v7.widget.CardView>-->
+
+            <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/savings_view"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_margin="10dp"
+                card_view:cardCornerRadius="8dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/savings"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="5dp"
+                        android:text="SAVINGS"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:id="@+id/savingsline"
+                        android:layout_width="70dp"
+                        android:layout_height="2dp"
+                        android:layout_below="@+id/savings"
+                        android:layout_centerInParent="true"
+                        android:background="@android:color/holo_orange_dark"
+                        android:orientation="horizontal" />
+
+                    <LinearLayout
+                        android:id="@+id/basicsavings"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/savingsline"
+                        android:layout_marginTop="30dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:text="Acme Savings Plus Account"
+                            android:textSize="18dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:text="926"
+                            android:textColor="@android:color/darker_gray"
+                            android:textSize="15dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/basicsavings"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/savingsamount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="1,584.23"
+                            android:textSize="26dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:text="on deposit"
+                            android:textColor="@android:color/darker_gray"
+                            android:textSize="13dp" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/creditcard_view"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_margin="10dp"
+                card_view:cardCornerRadius="8dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/creditcard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="5dp"
+                        android:text="CREDIT CARDS"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:id="@+id/creditcardline"
+                        android:layout_width="100dp"
+                        android:layout_height="2dp"
+                        android:layout_below="@+id/creditcard"
+                        android:layout_centerInParent="true"
+                        android:background="@android:color/holo_purple"
+                        android:orientation="horizontal" />
+
+                    <LinearLayout
+                        android:id="@+id/basiccc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/creditcardline"
+                        android:layout_marginTop="30dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:text="Acme Double Cash Card"
+                            android:textSize="18dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:text="2890"
+                            android:textColor="@android:color/darker_gray"
+                            android:textSize="15dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/basiccc"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/ccamount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="736.91"
+                            android:textSize="26dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:text="current balance"
+                            android:textColor="@android:color/darker_gray"
+                            android:textSize="13dp" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

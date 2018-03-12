@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="artifacts:applaunch-client-android-sdk">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/applaunch-client-android.aar/1d39089d13ed7ea9c8a2fc4dc9679f3d/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/applaunch-client-android.aar/1d39089d13ed7ea9c8a2fc4dc9679f3d/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

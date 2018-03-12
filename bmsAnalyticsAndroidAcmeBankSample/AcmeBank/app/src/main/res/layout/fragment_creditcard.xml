@@ -1,0 +1,530 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/RelationLayout2"
+    tools:context="info.androidhive.materialtabs.fragments.ListFragment">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:fillViewport="true"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="80dp"
+            android:weightSum="1">
+
+            <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/card_view"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_margin="15dp"
+                card_view:cardCornerRadius="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/customertypeheader"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/goldenColor"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/customertypetext"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:layout_margin="5dp"
+                            android:textColor="@android:color/white"
+                            android:text="Savings XX47"
+                            android:textStyle="bold"></TextView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal">
+
+                        <!--<ImageView-->
+                        <!--android:id="@+id/amexcard"-->
+                        <!--android:layout_width="200dp"-->
+                        <!--android:layout_height="match_parent"-->
+                        <!--android:src="@drawable/amexcardnew"></ImageView>-->
+
+                        <TextView
+                            android:id="@+id/textView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_margin="0dp"
+                            android:text="₹ 15000"
+                            android:textAlignment="center"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Display1"></TextView>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal">
+
+                        <!--<ImageView-->
+                        <!--android:id="@+id/amexcard"-->
+                        <!--android:layout_width="200dp"-->
+                        <!--android:layout_height="match_parent"-->
+                        <!--android:src="@drawable/amexcardnew"></ImageView>-->
+
+                        <TextView
+                            android:id="@+id/textView2"
+                            android:layout_width="match_parent"
+                            android:layout_height="63dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_margin="0dp"
+                            android:text="total outstanding balance"
+                            android:textAlignment="center"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                            android:textSize="18sp"></TextView>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="5dp"
+                android:paddingLeft="40dp"
+                android:paddingRight="40dp">
+
+                <Button
+                    android:id="@+id/ccPaymentButton"
+                    style="@style/AlertDialog.AppCompat.Light"
+                    android:layout_width="match_parent"
+                    android:layout_height="82dp"
+                    android:text="Make a Payment"
+                    android:background="@drawable/mybutton"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/activity_vertical_margin"
+                    android:textStyle="bold" />/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="6dp"
+                android:background="#c0c0c0" />
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:orientation="vertical">-->
+
+                <!--<LinearLayout-->
+                    <!--android:id="@+id/customertypeheader1"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:background="@color/goldenColor"-->
+                    <!--android:orientation="horizontal">-->
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/customertypetext1"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:gravity="center"-->
+                        <!--android:layout_margin="5dp"-->
+                        <!--android:textColor="@android:color/white"-->
+                        <!--android:text="08/01/2017"-->
+                        <!--android:textStyle="bold"></TextView>-->
+                <!--</LinearLayout>-->
+
+                <!--&lt;!&ndash;<LinearLayout&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_height="match_parent"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:orientation="vertical">&ndash;&gt;-->
+
+                    <!--<LinearLayout-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="42dp"-->
+                        <!--android:layout_marginTop="5dp"-->
+                        <!--android:orientation="horizontal"-->
+                        <!--android:weightSum="1">-->
+
+                        <!--<TextView-->
+
+                            <!--android:id="@+id/textViewTransaction1"-->
+                            <!--android:layout_width="200dp"-->
+                            <!--android:layout_height="40dp"-->
+                            <!--android:layout_gravity="center_vertical"-->
+                            <!--android:layout_margin="5dp"-->
+                            <!--android:text="Payment for Credit Card No. \n 4385XXX9XXXX6008"-->
+                            <!--android:textStyle="bold"></TextView>-->
+
+                        <!--<TextView-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_height="40dp"-->
+                            <!--android:layout_gravity="center_vertical"-->
+                            <!--android:layout_margin="5dp"-->
+                            <!--android:text="₹1000.00"-->
+                            <!--android:textAlignment="center"-->
+                            <!--android:textStyle="bold"></TextView>-->
+                    <!--&lt;!&ndash;</LinearLayout>&ndash;&gt;-->
+
+
+                <!--</LinearLayout>-->
+
+            <!--</LinearLayout>-->
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:orientation="vertical"-->
+                <!--android:weightSum="1">-->
+
+                <!--<LinearLayout-->
+                    <!--android:id="@+id/customertypeheader2"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:background="@color/goldenColor"-->
+                    <!--android:orientation="horizontal">-->
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/customertypetext2"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_margin="5dp"-->
+                        <!--android:gravity="center"-->
+                        <!--android:text="09/01/2017"-->
+                        <!--android:textColor="@android:color/white"-->
+                        <!--android:textStyle="bold"></TextView>-->
+                <!--</LinearLayout>-->
+
+                <!--&lt;!&ndash;<LinearLayout&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_height="match_parent"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:orientation="vertical">&ndash;&gt;-->
+
+                <!--<LinearLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginTop="5dp"-->
+                    <!--android:orientation="horizontal"-->
+                    <!--android:weightSum="1">-->
+
+                    <!--<TextView-->
+
+                        <!--android:id="@+id/textViewTransaction2"-->
+                        <!--android:layout_width="199dp"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_gravity="center_vertical"-->
+                        <!--android:layout_margin="5dp"-->
+                        <!--android:text="Purchase on Card No. \n4385XXX9XXXX9007 \nRef:806231230"-->
+                        <!--android:textStyle="bold"></TextView>-->
+
+                    <!--<TextView-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="40dp"-->
+                        <!--android:layout_gravity="center_vertical"-->
+                        <!--android:layout_margin="5dp"-->
+                        <!--android:text="₹5000.00"-->
+                        <!--android:textAlignment="center"-->
+                        <!--android:textStyle="bold"></TextView>-->
+                    <!--&lt;!&ndash;</LinearLayout>&ndash;&gt;-->
+
+
+                <!--</LinearLayout>-->
+
+            <!--</LinearLayout>-->
+
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:orientation="vertical"-->
+                <!--android:weightSum="1">-->
+
+                <!--<LinearLayout-->
+                    <!--android:id="@+id/customertypeheader3"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:background="@color/goldenColor"-->
+                    <!--android:orientation="horizontal">-->
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/customertypetext3"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_margin="5dp"-->
+                        <!--android:gravity="center"-->
+                        <!--android:text="15/01/2017"-->
+                        <!--android:textColor="@android:color/white"-->
+                        <!--android:textStyle="bold"></TextView>-->
+                <!--</LinearLayout>-->
+
+                <!--&lt;!&ndash;<LinearLayout&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_height="match_parent"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:orientation="vertical">&ndash;&gt;-->
+
+                <!--<LinearLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginTop="5dp"-->
+                    <!--android:orientation="horizontal"-->
+                    <!--android:weightSum="1">-->
+
+                    <!--<TextView-->
+
+                        <!--android:id="@+id/textViewTransaction3"-->
+                        <!--android:layout_width="199dp"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_gravity="center_vertical"-->
+                        <!--android:layout_margin="5dp"-->
+                        <!--android:text="NEFT INWARD CITI18826970184 from ATRIA TECHNOL"-->
+                        <!--android:textStyle="bold"></TextView>-->
+
+                    <!--<TextView-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="40dp"-->
+                        <!--android:layout_gravity="center_vertical"-->
+                        <!--android:layout_margin="5dp"-->
+                        <!--android:text="₹1888.00"-->
+                        <!--android:textAlignment="center"-->
+                        <!--android:textStyle="bold"></TextView>-->
+                    <!--&lt;!&ndash;</LinearLayout>&ndash;&gt;-->
+
+
+                <!--</LinearLayout>-->
+
+            <!--</LinearLayout>-->
+
+
+            <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:orientation="vertical"-->
+            <!--android:weightSum="1">-->
+
+            <!--<LinearLayout-->
+                <!--android:id="@+id/customertypeheader4"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:background="@color/goldenColor"-->
+                <!--android:orientation="horizontal">-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/customertypetext4"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_margin="5dp"-->
+                    <!--android:gravity="center"-->
+                    <!--android:text="27/01/2017"-->
+                    <!--android:textColor="@android:color/white"-->
+                    <!--android:textStyle="bold"></TextView>-->
+            <!--</LinearLayout>-->
+
+            <!--&lt;!&ndash;<LinearLayout&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_height="match_parent"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:orientation="vertical">&ndash;&gt;-->
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="5dp"-->
+                <!--android:orientation="horizontal"-->
+                <!--android:weightSum="1">-->
+
+                <!--<TextView-->
+
+                    <!--android:id="@+id/textViewTransaction4"-->
+                    <!--android:layout_width="199dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_gravity="center_vertical"-->
+                    <!--android:layout_margin="5dp"-->
+                    <!--android:text="Purchase on Card No.\n5497XXX0XXXX9800\nRef:805971198233"-->
+                    <!--android:textStyle="bold"></TextView>-->
+
+                <!--<TextView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="40dp"-->
+                    <!--android:layout_gravity="center_vertical"-->
+                    <!--android:layout_margin="5dp"-->
+                    <!--android:text="₹9000"-->
+                    <!--android:textAlignment="center"-->
+                    <!--android:textStyle="bold"></TextView>-->
+                <!--&lt;!&ndash;</LinearLayout>&ndash;&gt;-->
+
+
+            <!--</LinearLayout>-->
+
+        <!--</LinearLayout>-->
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:orientation="vertical"-->
+                <!--android:weightSum="1">-->
+
+                <!--<LinearLayout-->
+                    <!--android:id="@+id/customertypeheader5"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:background="@color/goldenColor"-->
+                    <!--android:orientation="horizontal">-->
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/customertypetext5"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_margin="5dp"-->
+                        <!--android:gravity="center"-->
+                        <!--android:text="30/01/2017"-->
+                        <!--android:textColor="@android:color/white"-->
+                        <!--android:textStyle="bold"></TextView>-->
+                <!--</LinearLayout>-->
+
+                <!--&lt;!&ndash;<LinearLayout&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_height="match_parent"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:orientation="vertical">&ndash;&gt;-->
+
+                <!--<LinearLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginTop="5dp"-->
+                    <!--android:orientation="horizontal"-->
+                    <!--android:weightSum="1">-->
+
+                    <!--<TextView-->
+
+                        <!--android:id="@+id/textViewTransaction5"-->
+                        <!--android:layout_width="199dp"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_gravity="center_vertical"-->
+                        <!--android:layout_margin="5dp"-->
+                        <!--android:text="ATM WITHDRAWAL Card no:\n5497XX0XXXX9800 \nRef:805820006877 \nMANTRI ELEGANCE"-->
+                        <!--android:textStyle="bold"></TextView>-->
+
+                    <!--<TextView-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="40dp"-->
+                        <!--android:layout_gravity="center_vertical"-->
+                        <!--android:layout_margin="5dp"-->
+                        <!--android:text="₹3000"-->
+                        <!--android:textAlignment="center"-->
+                        <!--android:textStyle="bold"></TextView>-->
+                    <!--&lt;!&ndash;</LinearLayout>&ndash;&gt;-->
+
+
+                <!--</LinearLayout>-->
+
+            <!--</LinearLayout>-->
+
+
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:orientation="vertical"-->
+                <!--android:weightSum="1">-->
+
+                <!--&lt;!&ndash;<LinearLayout&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:id="@+id/customertypeheader6"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:background="@color/goldenColor"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:orientation="horizontal">&ndash;&gt;-->
+
+                    <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:id="@+id/customertypetext6"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:layout_margin="5dp"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:gravity="center"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:text="1/02/2017"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:textColor="@android:color/white"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:textStyle="bold"></TextView>&ndash;&gt;-->
+                <!--&lt;!&ndash;</LinearLayout>&ndash;&gt;-->
+
+                <!--&lt;!&ndash;<LinearLayout&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_height="match_parent"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:orientation="vertical">&ndash;&gt;-->
+
+                <!--<LinearLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginTop="5dp"-->
+                    <!--android:orientation="horizontal"-->
+                    <!--android:weightSum="1">-->
+
+                    <!--<TextView-->
+
+                        <!--android:id="@+id/textViewTransaction6"-->
+                        <!--android:layout_width="199dp"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_gravity="center_vertical"-->
+                        <!--android:layout_margin="5dp"-->
+                        <!--android:text="ATM WITHDRAWAL Card no:\n5497XX0XXXX9800 \nRef:805820564568 \n AXIS ELEGANCE"-->
+                        <!--android:textStyle="bold"></TextView>-->
+
+                    <!--<TextView-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="40dp"-->
+                        <!--android:layout_gravity="center_vertical"-->
+                        <!--android:layout_margin="5dp"-->
+                        <!--android:text="₹10000"-->
+                        <!--android:textAlignment="center"-->
+                        <!--android:textStyle="bold"></TextView>-->
+                    <!--&lt;!&ndash;</LinearLayout>&ndash;&gt;-->
+
+
+                <!--</LinearLayout>-->
+
+            <!--</LinearLayout>-->
+            <!--<android.support.v7.widget.RecyclerView-->
+        <!--android:id="@+id/recycleView"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent" />-->
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="15dp">
+
+
+                <android.support.design.widget.TabLayout
+                    android:id="@+id/tabs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    />
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/viewpager"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
