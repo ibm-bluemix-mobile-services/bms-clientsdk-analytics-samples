@@ -51,7 +51,7 @@ public class CustomViewIconTextTabsActivity extends AppCompatActivity implements
         activeSessionStartTime = System.currentTimeMillis();
         analytics =new AnalyticsLib();
         BMSClient.getInstance().initialize(getApplicationContext(), ".stage1.ng.bluemix.net");
-        Analytics.init(getApplication(), "Acme Bank", "77d89a66-fbf5-4fd3-ae8e-f84f206849d0", true, Analytics.DeviceEvent.ALL);
+        Analytics.init(getApplication(), "Acme Bank", "a078af03-9cdb-4855-8e29-97731fc677ea", true, Analytics.DeviceEvent.ALL);
         Analytics.enable();
         //  End of Initialisation
 
@@ -119,8 +119,7 @@ public class CustomViewIconTextTabsActivity extends AppCompatActivity implements
         feedback.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                System.out.println(" ****** machi clicked da");
-                BMSAnalytics.triggerFeedbackMode();
+                Analytics.triggerFeedbackMode();
             }
         });
         setupTabIcons();
