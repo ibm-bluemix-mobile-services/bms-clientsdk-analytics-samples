@@ -50,8 +50,8 @@ public class CustomViewIconTextTabsActivity extends AppCompatActivity implements
         //  Analytics Initialisation
         activeSessionStartTime = System.currentTimeMillis();
         analytics =new AnalyticsLib();
-        BMSClient.getInstance().initialize(getApplicationContext(), ".stage1.ng.bluemix.net");
-        Analytics.init(getApplication(), "Acme Bank", "a078af03-9cdb-4855-8e29-97731fc677ea", true, Analytics.DeviceEvent.ALL);
+        BMSClient.getInstance().initialize(getApplicationContext(), BMSClient.REGION_US_SOUTH);
+        Analytics.init(getApplication(), "Acme Bank", "c7e614cd-60c8-42d0-b96c-04d401778475", true, Analytics.DeviceEvent.ALL);
         Analytics.enable();
         //  End of Initialisation
 
