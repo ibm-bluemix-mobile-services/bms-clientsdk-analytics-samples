@@ -1,5 +1,6 @@
 package com.acme.bank.activity;
 
+import android.content.DialogInterface;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
@@ -24,9 +25,18 @@ import com.applaunch.api.AppLaunchException;
 import com.ibm.mobilefirstplatform.clientsdk.android.analytics.api.Analytics;
 import com.ibm.mobilefirstplatform.clientsdk.android.analytics.internal.BMSAnalytics;
 import com.ibm.mobilefirstplatform.clientsdk.android.core.api.BMSClient;
+import com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPush;
+import com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPushException;
+import com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPushNotificationListener;
+import com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPushResponseListener;
+import com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPSimplePushNotification;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 
 public class CustomViewIconTextTabsActivity extends AppCompatActivity implements TabChangedListenerInternal {
@@ -40,6 +50,8 @@ public class CustomViewIconTextTabsActivity extends AppCompatActivity implements
     private String previousPage;
     private String currentPage;
     private long activeSessionStartTime;
+    private MFPPush push; // Push client
+    private MFPPushNotificationListener notificationListener;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,10 +62,78 @@ public class CustomViewIconTextTabsActivity extends AppCompatActivity implements
         //  Analytics Initialisation
         activeSessionStartTime = System.currentTimeMillis();
         analytics =new AnalyticsLib();
-        BMSClient.getInstance().initialize(getApplicationContext(), ".stage1.ng.bluemix.net");
-        Analytics.init(getApplication(), "Acme Bank", "77d89a66-fbf5-4fd3-ae8e-f84f206849d0", true, Analytics.DeviceEvent.ALL);
+       // BMSClient.getInstance().initialize(getApplicationContext(), ".stage1.ng.bluemix.net");
+        BMSClient.getInstance().initialize(getApplicationContext(), BMSClient.REGION_SYDNEY);
+        Analytics.init(getApplication(), "Acme Bank", "ef253401-3e57-4448-a341-f45730c23885", true, Analytics.DeviceEvent.ALL);
         Analytics.enable();
         //  End of Initialisation
+
+        //PUSH
+
+//        push = MFPPush.getInstance();
+//        push.initialize(getApplicationContext(),"97b82834-4118-41d7-83ad-b09d5d87407b","1a904dfc-8347-4e0d-8b81-27df8caf4e1f");
+
+        push = MFPPush.getInstance();
+        push.initialize(getApplicationContext(),"ac8a06c1-2343-4998-a717-ce885eb350e2","0eac1c64-e20b-463d-a63b-2a778ffb0db3");
+
+        notificationListener = new MFPPushNotificationListener() {
+            @Override
+            public void onReceive(final MFPSimplePushNotification message) {
+                runOnUiThread(new Runnable() {
+                    public void run() {
+                        new android.app.AlertDialog.Builder(CustomViewIconTextTabsActivity.this)
+                                .setTitle("Received a Push Notification")
+                                .setMessage(message.getAlert())
+                                .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
+                                    public void onClick(DialogInterface dialog, int whichButton) {
+                                    }
+                                })
+                                .show();
+                    }
+                });
+            }
+        };
+
+        MFPPushResponseListener registrationResponselistener = new MFPPushResponseListener<String>() {
+            @Override
+            public void onSuccess(String response) {
+                // Split response and convert to JSON object to display User ID confirmation from the backend
+                String[] resp = response.split("Text: ");
+                try {
+                    JSONObject responseJSON = new JSONObject(resp[1]);
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+                // Start listening to notification listener now that registration has succeeded
+                push.listen(notificationListener);
+            }
+
+            @Override
+            public void onFailure(MFPPushException exception) {
+                String errLog = "Error registering for push notifications: ";
+                String errMessage = exception.getErrorMessage();
+                int statusCode = exception.getStatusCode();
+
+                // Set error log based on response code and error message
+                if(statusCode == 401){
+                    errLog += "Cannot authenticate successfully with Bluemix Push instance, ensure your CLIENT SECRET was set correctly.";
+                } else if(statusCode == 404 && errMessage.contains("Push GCM Configuration")){
+                    errLog += "Push GCM Configuration does not exist, ensure you have configured GCM Push credentials on your Bluemix Push dashboard correctly.";
+                } else if(statusCode == 404 && errMessage.contains("PushApplication")){
+                    errLog += "Cannot find Bluemix Push instance, ensure your APPLICATION ID was set correctly and your phone can successfully connect to the internet.";
+                } else if(statusCode >= 500){
+                    errLog += "Bluemix and/or your Push instance seem to be having problems, please try again later.";
+                }
+
+                // make push null since registration failed
+                push = null;
+            }
+        };
+
+        // Attempt to register device using response listener created above
+        // Include unique sample user Id instead of Sample UserId in order to send targeted push notifications to specific users
+        push.registerDeviceWithUserId("Sample UserID",registrationResponselistener);
+
 
 
         setContentView(R.layout.activity_custom_view_icon_text_tabs);
@@ -98,11 +178,14 @@ public class CustomViewIconTextTabsActivity extends AppCompatActivity implements
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                long totalActiveMillis =  System.currentTimeMillis() - activeSessionStartTime;
-                double seconds = (totalActiveMillis / 1000) % 60;
-                double minutes = (totalActiveMillis / 1000) / 60;
-                seconds = seconds / 100;
-                double minutesSec = minutes + seconds;
+//                long totalActiveMillis =  System.currentTimeMillis() - activeSessionStartTime;
+//                float seconds = (totalActiveMillis / 1000) % 60;
+//                float minutes = (totalActiveMillis / 1000) / 60;
+//                seconds = seconds / 100;
+//                float minutesSec = minutes + seconds;
+//              System.out.println("Data"+minutesSec);
+                Random r = new Random();
+                int minutesSec = 1;
                 analytics.sessionTime(minutesSec);
 
                 analytics.closedOnPage(currentPage);
@@ -131,6 +214,9 @@ public class CustomViewIconTextTabsActivity extends AppCompatActivity implements
     @Override
     protected void onResume() {
         super.onResume();
+        if (push != null) {
+            push.listen(notificationListener);
+        }
       //  activeSessionStartTime = System.currentTimeMillis();
 
         // Toast.makeText(this.getApplicationContext(), "onResume", Toast.LENGTH_SHORT).show();
@@ -139,6 +225,9 @@ public class CustomViewIconTextTabsActivity extends AppCompatActivity implements
     @Override
     protected void onPause() {
         super.onPause();
+        if (push != null) {
+            push.hold();
+        }
 
        // Toast.makeText(this.getApplicationContext(), "Pausing tooo", Toast.LENGTH_SHORT).show();
     }

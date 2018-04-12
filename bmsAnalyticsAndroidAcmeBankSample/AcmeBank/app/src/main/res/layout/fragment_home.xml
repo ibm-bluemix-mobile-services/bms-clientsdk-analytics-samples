@@ -222,14 +222,14 @@
                             android:id="@+id/savingsamount"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="1,584.23"
+                            android:text="₹1,584.23"
                             android:textSize="26dp" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="5dp"
-                            android:text="on deposit"
+                            android:text="Withdrawal\n Balance"
                             android:textColor="@android:color/darker_gray"
                             android:textSize="13dp" />
                     </LinearLayout>
@@ -290,7 +290,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="5dp"
-                            android:text="2890"
+                            android:text="6789"
                             android:textColor="@android:color/darker_gray"
                             android:textSize="15dp" />
                     </LinearLayout>
@@ -306,14 +306,14 @@
                             android:id="@+id/ccamount"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="736.91"
+                            android:text="₹736.91"
                             android:textSize="26dp" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="5dp"
-                            android:text="current balance"
+                            android:text="Outstanding \nBalance"
                             android:textColor="@android:color/darker_gray"
                             android:textSize="13dp" />
                     </LinearLayout>

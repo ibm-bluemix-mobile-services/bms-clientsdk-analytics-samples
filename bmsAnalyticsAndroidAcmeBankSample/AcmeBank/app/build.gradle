@@ -37,6 +37,15 @@ dependencies {
     //compile 'com.ibm.mobilefirstplatform.clientsdk.android:core:[2.0.0,3.0.0)'
     compile 'com.ibm.mobilefirstplatform.clientsdk.android:analyticsapi:1.2.0'
     compile 'com.ibm.mobilefirstplatform.clientsdk.android:core:3.1.4'
+
+
+     compile 'com.google.firebase:firebase-messaging:10.2.6'
+     compile 'com.ibm.mobilefirstplatform.clientsdk.android:push:3.6.4'
+
+
+
+
     testCompile 'junit:junit:4.12'
 }
+apply plugin: 'com.google.gms.google-services'
 

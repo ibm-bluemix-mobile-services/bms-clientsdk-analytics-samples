@@ -66,7 +66,7 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
                             android:layout_margin="0dp"
-                            android:text="₹ 15000"
+                            android:text="₹ 736.91"
                             android:textAlignment="center"
                             android:textAppearance="@style/TextAppearance.AppCompat.Display1"></TextView>
 
@@ -90,7 +90,7 @@
                             android:layout_height="63dp"
                             android:layout_gravity="center_vertical"
                             android:layout_margin="0dp"
-                            android:text="total outstanding balance"
+                            android:text="Total outstanding balance"
                             android:textAlignment="center"
                             android:textAppearance="@style/TextAppearance.AppCompat.Display1"
                             android:textSize="18sp"></TextView>
@@ -112,10 +112,10 @@
                     style="@style/AlertDialog.AppCompat.Light"
                     android:layout_width="match_parent"
                     android:layout_height="82dp"
-                    android:text="Make a Payment"
                     android:background="@drawable/mybutton"
                     android:paddingLeft="20dp"
                     android:paddingRight="20dp"
+                    android:text="Make a Payment(Crash)"
                     android:textColor="@android:color/white"
                     android:textSize="@dimen/activity_vertical_margin"
                     android:textStyle="bold" />/>

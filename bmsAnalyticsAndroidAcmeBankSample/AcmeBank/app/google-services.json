@@ -1,0 +1,73 @@
+{
+  "project_info": {
+    "project_number": "566898955298",
+    "firebase_url": "https://android-app-7b790.firebaseio.com",
+    "project_id": "android-app-7b790",
+    "storage_bucket": "android-app-7b790.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:566898955298:android:d8e754d37ae8260c",
+        "android_client_info": {
+          "package_name": "com.acme.bank"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "566898955298-8309f8tj84bo8jgtmainf0j0h6qa3rp6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAh7_YVkwCFvrzJ_dgSoytexnBev_RxGnc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:566898955298:android:7434c1807fe53b6a",
+        "android_client_info": {
+          "package_name": "com.ibm.mobilefirstplatform.clientsdk.android.push"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "566898955298-8309f8tj84bo8jgtmainf0j0h6qa3rp6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAh7_YVkwCFvrzJ_dgSoytexnBev_RxGnc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

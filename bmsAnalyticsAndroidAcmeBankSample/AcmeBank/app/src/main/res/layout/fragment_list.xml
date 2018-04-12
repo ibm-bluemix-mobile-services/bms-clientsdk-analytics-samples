@@ -68,7 +68,7 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
                             android:layout_margin="0dp"
-                            android:text="₹ 15000"
+                            android:text="₹ 1,584.23"
                             android:textAlignment="center"
                             android:textAppearance="@style/TextAppearance.AppCompat.Display1"></TextView>
 
@@ -92,7 +92,7 @@
                             android:layout_height="63dp"
                             android:layout_gravity="center_vertical"
                             android:layout_margin="0dp"
-                            android:text="total withdrawal balance"
+                            android:text="Total withdrawal balance"
                             android:textAlignment="center"
                             android:textAppearance="@style/TextAppearance.AppCompat.Display1"
                             android:textSize="18sp"></TextView>
