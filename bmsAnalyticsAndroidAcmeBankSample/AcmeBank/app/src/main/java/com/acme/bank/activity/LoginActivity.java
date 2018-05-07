@@ -26,7 +26,9 @@ import com.applaunch.AppLaunchResponseListener;
 import com.applaunch.api.AppLaunch;
 import com.applaunch.api.AppLaunchActions;
 import com.applaunch.api.AppLaunchParameters;
+import com.ibm.mobilefirstplatform.clientsdk.android.analytics.api.Analytics;
 import com.ibm.mobilefirstplatform.clientsdk.android.core.api.BMSClient;
+import com.ibm.mobilefirstplatform.clientsdk.android.logger.api.Logger;
 
 /**
  * A login screen that offers login via email/password.
@@ -57,6 +59,16 @@ public class LoginActivity extends AppCompatActivity implements AppLaunchActions
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+        // BMSClient.getInstance().initialize(getApplicationContext(), ".stage1.ng.bluemix.net");
+        BMSClient.getInstance().initialize(getApplicationContext(), BMSClient.REGION_SYDNEY);
+        Analytics.init(getApplication(), "Acme Bank", "7769a2ba-c910-4d35-9421-9fb794ca6187", true, false, Analytics.DeviceEvent.ALL);
+        Analytics.enable();
+        if (Logger.isUnCaughtExceptionDetected()) {
+            Analytics.send();
+            Logger.send();
+        }
+
         // Set up the login form.
         mEmailView = (AutoCompleteTextView) findViewById(R.id.email);
 
@@ -134,6 +146,8 @@ public class LoginActivity extends AppCompatActivity implements AppLaunchActions
         } else {
             // Show a progress spinner, and kick off a background task to
             // perform the user login attempt.
+            System.out.println("Userid="+email);
+            Analytics.setUserIdentity(email);
             showProgress(true);
             mAuthTask = new UserLoginTask(email, password);
             mAuthTask.execute((Void) null);

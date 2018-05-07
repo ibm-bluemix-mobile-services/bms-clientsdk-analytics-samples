@@ -115,7 +115,7 @@
                     android:background="@drawable/mybutton"
                     android:paddingLeft="20dp"
                     android:paddingRight="20dp"
-                    android:text="Make a Payment(Crash)"
+                    android:text="Make a Payment"
                     android:textColor="@android:color/white"
                     android:textSize="@dimen/activity_vertical_margin"
                     android:textStyle="bold" />/>

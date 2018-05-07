@@ -15,12 +15,6 @@ buildscript {
 
 allprojects {
     repositories {
-<<<<<<< HEAD
-        maven { url 'https://maven.google.com' }
-        maven { url "https://oss.sonatype.org/content/repositories/staging"}
-        maven { url "https://oss.sonatype.org/content/repositories/snapshots"}
-=======
->>>>>>> b5084ee22254dffc767239fefb693eb40329d3a2
         jcenter()
         flatDir {
             dirs 'libs'
