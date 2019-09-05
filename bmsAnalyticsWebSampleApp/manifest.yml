@@ -1,0 +1,5 @@
+applications:
+- name:      MobileAnalyticsStarterApp
+  host:      MobileAnalyticsStarterApp
+  memory:    128M
+  
